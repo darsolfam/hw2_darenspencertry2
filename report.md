@@ -41,7 +41,7 @@ The final output for a representative test case correctly identified 3 tool stat
 
 ## Where the Prototype Still Fails
 
-One consistent failure across all three prompt versions: when an internal abbreviation has no surrounding context, the model drops it rather than flagging it. In testing, "A Shift escalated to WS" disappeared from every output. The model could not infer what "WS" meant and silently omitted it instead of placing it in NEEDS FOLLOW-UP.
+During prompt iteration with Haiku, a recurring failure appeared: when an internal abbreviation had no surrounding context, the model dropped it rather than flagging it. In testing, "A Shift escalated to WS" disappeared from all three Haiku outputs. Sonnet handled this better — it included the WS escalation in the tool status entry. However, both models remain unreliable when encountering completely unknown internal terms with no context clues.
 
 This is a meaningful gap. In semiconductor manufacturing, internal team names and process abbreviations are common, and a missed escalation could have real operational consequences. The prototype cannot be trusted to catch everything — it requires a human to review the output against the original notes, especially for any line containing an unfamiliar abbreviation.
 
