@@ -16,7 +16,7 @@ import anthropic
 # ─── CONFIGURATION ────────────────────────────────────────────────────────────
 
 # The model we are using.
-MODEL = "claude-haiku-4-5-20251001"
+MODEL = "claude-sonnet-4-6"
 
 # The system instruction tells the AI what its job is.
 # This is what we will revise in Step 5.

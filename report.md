@@ -19,7 +19,7 @@ I used **Claude Haiku** (claude-haiku-4-5-20251001) via the Anthropic API.
 
 My original plan was to use Google Gemini through Google AI Studio, which the assignment recommends as the free default. However, my Google account was flagged for suspicious activity during setup, which locked the free tier quota to 0 for all models. I switched to the Anthropic API, which provided $20 in existing credits — more than sufficient for this assignment.
 
-I chose Haiku specifically because it is fast, inexpensive, and well-suited for structured extraction tasks that do not require deep reasoning. For a DAM summary workflow that might run after every meeting, a lightweight model is the right choice. I did not test other models, but would expect similar or better results from larger models at higher cost.
+I initially chose Haiku for its speed and low cost, reasoning that structured extraction does not require deep reasoning. I later tested Sonnet (claude-sonnet-4-6) on the same input and observed two meaningful differences: Sonnet correctly captured an internal escalation ("A Shift escalated to WS") that Haiku dropped entirely, and Sonnet flagged a contradiction in the notes where the same tool appeared as both "down to vendor" and "back in queue" — placing it in NEEDS FOLLOW-UP rather than silently picking one. For clean, well-structured notes Haiku performs comparably. For real-world DAM notes that contain contradictions, jargon, and incomplete information, Sonnet handles edge cases more reliably. The cost difference is negligible for this use case, so the final version uses Sonnet.
 
 ---
 
