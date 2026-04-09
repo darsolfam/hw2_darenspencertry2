@@ -10,7 +10,7 @@ A simple GenAI workflow that converts raw meeting notes into structured action i
 - **Why automate:** Saves time after every meeting, reduces missed follow-ups, creates consistent formatting
 
 ## Video Walkthrough
-*(link will be added after recording)*
+https://youtu.be/kZdWnSF3TbQ
 
 ## Setup
 1. Install dependencies: `pip install google-generativeai`

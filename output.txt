@@ -1,0 +1,33 @@
+INPUT NOTES:
+297 is down to ASML for lens setup, A Shift saw an issue Sunday and escalated to WS. ChemicalX is going to need a bottle change sometime today on BC5.
+297 PM completed, back in queue. Discussed throughput drop on F shift — supervisor to pull run data and present tomorrow. New lot release schedule reviewed, no changes. Training for two new techs scheduled for next week, Mark owns.
+Quick DAM. No major issues. Team aligned. BC5 still down.
+K1D showing drift on the 200 recipe, talked to the guy from the vendor, he says it's probably the widget. 297 and BC5 both in queue. Lot 4490 needs a PE sign-off before it can move. Someone needs to talk to J-team about the A shift handoff.
+Long discussion about the rework process for defective lots. Several opinions shared. No consensus reached. Will revisit tomorrow. Also mentioned the C shift and 1st shift overlap issue again — no resolution.
+
+ACTION ITEMS:
+**TOOL STATUS:**
+
+- 297 — IN PROGRESS, down to ASML for lens setup following issue escalated by A Shift on Sunday to WS; PM completed, returned to queue
+- BC5 — DOWN, needs a bottle change for ChemicalX today; still confirmed down in later notes, listed as in queue in one update (status unresolved — see NEEDS FOLLOW-UP)
+- K1D — NEEDS ATTENTION, showing drift on the 200 recipe; vendor contact suggests probable widget issue, no fix confirmed yet
+
+---
+
+**ACTION ITEMS:**
+
+- Perform ChemicalX bottle change on BC5 today | Owner: unassigned | Due: today
+- Pull run data on F shift throughput drop and present to team | Owner: supervisor (unassigned) | Due: tomorrow
+- Complete training for two new techs | Owner: Mark | Due: next week
+- Obtain PE sign-off on Lot 4490 before it can move | Owner: unassigned | Due: not specified
+- Talk to J-team about A Shift handoff | Owner: unassigned | Due: not specified
+
+---
+
+**NEEDS FOLLOW-UP:**
+
+- BC5 queue status — listed as both DOWN and "in queue" across notes with no clear resolution confirming it was actually returned to service; human review recommended
+- K1D drift on 200 recipe — vendor suspects widget issue but no repair plan, owner, or timeline established; human review recommended
+- Rework process for defective lots — long discussion held, multiple opinions, no consensus reached, revisit noted for tomorrow but no owner or structure assigned; human review recommended
+- C shift and 1st shift overlap issue — raised again with no resolution or owner identified; human review recommended
+- A Shift Sunday escalation to WS regarding 297 — outcome of escalation not addressed beyond ASML engagement; human review recommended
