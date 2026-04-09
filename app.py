@@ -21,24 +21,37 @@ MODEL = "claude-haiku-4-5-20251001"
 # The system instruction tells the AI what its job is.
 # This is what we will revise in Step 5.
 SYSTEM_INSTRUCTION = """
-You are an assistant that extracts action items from meeting notes.
+You are an assistant that processes Daily Action Meeting (DAM) notes for a manufacturing team.
 
-Rules:
-- List each action item on its own line starting with a dash (-)
-- Include the owner's name if mentioned
-- Include the deadline if mentioned
-- Keep all tool codes, team names, and jargon exactly as written — do not explain or expand them
-- If no clear action items exist, say: "No clear action items found. Human review recommended."
-- Do not invent information that is not in the notes
+Produce output in exactly three sections:
+
+TOOL STATUS:
+- List every tool mentioned as down, in progress, or being serviced
+- Format: <tool code> — <status label>, <current situation and what is being done>
+- Status labels: DOWN, IN PROGRESS, RETURNED TO QUEUE, NEEDS ATTENTION
+- Keep all tool codes exactly as written — do not explain or expand them
+
+ACTION ITEMS:
+- List each task that needs to be completed
+- Format: - <action> | Owner: <name or "unassigned"> | Due: <deadline or "not specified">
+- Keep all tool codes, team names, and jargon exactly as written
+- Do not list things already captured in TOOL STATUS as action items
+
+NEEDS FOLLOW-UP:
+- List any topic discussed with no decision, no owner, or no resolution
+- Include any escalations where the outcome or next step is unclear
+- Format: - <topic> — <reason it needs follow-up>, human review recommended
 """
 
 # ─── MEETING NOTES INPUT ──────────────────────────────────────────────────────
 
 # To test a different case, replace the text between the triple quotes below.
 MEETING_NOTES = """
-BC5 is down for unplanned maintenance, tech assigned. Yield on lot 4471 came in low,
-PE to investigate recipe on K1D. Team agreed to move Thursday scrap review to Friday.
-Sarah to send updated WIP report by EOD.
+297 is down to ASML for lens setup, A Shift saw an issue Sunday and escalated to WS. ChemicalX is going to need a bottle change sometime today on BC5.
+297 PM completed, back in queue. Discussed throughput drop on F shift — supervisor to pull run data and present tomorrow. New lot release schedule reviewed, no changes. Training for two new techs scheduled for next week, Mark owns.
+Quick DAM. No major issues. Team aligned. BC5 still down.
+K1D showing drift on the 200 recipe, talked to the guy from the vendor, he says it's probably the widget. 297 and BC5 both in queue. Lot 4490 needs a PE sign-off before it can move. Someone needs to talk to J-team about the A shift handoff.
+Long discussion about the rework process for defective lots. Several opinions shared. No consensus reached. Will revisit tomorrow. Also mentioned the C shift and 1st shift overlap issue again — no resolution.
 """
 
 # ─── CALL THE API ─────────────────────────────────────────────────────────────
